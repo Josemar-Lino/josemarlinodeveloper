@@ -4,38 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+    <title>Josêmar Lino | Desenvolvedor Full Stack</title>
+    <meta name="description" content="Desenvolvedor Full Stack apaixonado por criar soluções tecnológicas inovadoras">
     <!---CSS -->
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/responsive.css"
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <link rel="stylesheet" href="CSS/solar-system.css">
     <!--- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     <!--Icons-->
     <script src="https://kit.fontawesome.com/1c6dc5c4a3.js" crossorigin="anonymous" defer></script>
-
 </head>
 <body>
+    <div class="solar-system-bg">
+        <div class="stars"></div>
+        <div class="sun"></div>
+        <div class="orbit mercury-orbit">
+            <div class="planet mercury"></div>
+        </div>
+        <div class="orbit venus-orbit">
+            <div class="planet venus"></div>
+        </div>
+        <div class="orbit earth-orbit">
+            <div class="planet earth"></div>
+        </div>
+        <div class="orbit mars-orbit">
+            <div class="planet mars"></div>
+        </div>
+    </div>
     <header>
         <h1>Dev. Josêmar Lino</h1>
         <nav>
-            <a href="https://github.com/Josemar-Lino" target="_blank">
+            <a href="#sobre">Sobre</a>
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+            <a href="https://github.com/Josemar-Lino" target="_blank" class="social-icon">
                 <i class="fa-brands fa-square-github"></i>
-            <a href="https://www.linkedin.com/in/josêmarlino/" target="_blank">
+            </a>
+            <a href="https://www.linkedin.com/in/josêmarlino/" target="_blank" class="social-icon">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
         </nav>
-        
     </header>
+    
     <main>
-     <section class="main-content">
-         <article class="text">
-           <h2>🙋‍♂️Sobre mim</h2>
-           <p>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <h2>Transformando Ideias em Código</h2>
+                <p class="hero-description">Desenvolvedor Full Stack especializado em criar experiências digitais impactantes</p>
+                <div class="cta-buttons">
+                    <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                    <a href="#contato" class="btn btn-secondary">Entrar em Contato</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="main-content">
+            <article class="text">
+                <h2>🙋‍♂️ Sobre mim</h2>
+                <p>
             Desenvolvedor apaixonado por tecnologia, com entusiasmo para aprender e crescer profissionalmente na área de desenvolvimento de software. 
             Estou em um período de Transição de carreira. Tenho uma sólida base de conhecimento em programação e estou constantemente buscando novos 
             projetos a cada dia para expandir minhas habilidades e conhecimentos técnicos. Estou entusiasmado em conectar-me com profissionais da área
@@ -43,59 +76,117 @@
              colaborações ou para trocar ideias. Vamos construir algo incrível juntos!
 
            </p>
-
          </article>
 
-         <aside class="techs"> 
-           <h2>🧑‍💻 Tecnologias</h2>
 
-            <div class="cards-container">
-                 <div class="card">
-                <img src="./img/techs/Php.png" alt="Logo do Php">
-               </div>
-                 <div class="card">
-                <img src="./img/techs/Laravel.png" alt="Logo do Laravel">
-               </div>
-               <!--- <div class="card">
-                <img src="./img/techs/html5-logo-31813.png" alt="Logo do Html">
-               </div> 
-               <div class="card">
-                <img src="./img/techs/Css.png" alt="Logo do Css">
-               </div> --->
-               <div class="card"> 
-                <img src="./img/techs/javascript-39404.png" alt="Logo do JavaScrip">
-               </div>
-               <!---<div class="card">
-                <img src="./img/techs/typescript.png" alt="Logo do TypeScript">
-               </div> --->
-               <div class="card">
-                <img src="./img/techs/node js.png" alt="Logo do NodeJS">
-               </div>  
-                <div class="card">
-                <img src="./img/techs/Mysql.png" alt="Logo do Mysql">
-               </div>  
-               
-               
-            
-               <!---<div class="card">
-                <img src="" alt="Logo do Html" --->
-                
+       </section>
+
+       <section id="tecnologias" class="techs">
+         <h2>🧑‍💻 Tecnologias</h2>
+         <p class="section-description">Ferramentas e tecnologias que utilizo para criar soluções eficientes</p>
+
+         <div class="cards-container">
+           <div class="card" data-tech="PHP">
+             <img src="./img/techs/Php.png" alt="Logo do PHP">
+             <span class="tech-name">PHP</span>
+           </div>
+           <div class="card" data-tech="Laravel">
+             <img src="./img/techs/Laravel.png" alt="Logo do Laravel">
+             <span class="tech-name">Laravel</span>
+           </div>
+           <div class="card" data-tech="HTML5">
+             <img src="./img/techs/html5-logo-31813.png" alt="Logo do HTML5">
+             <span class="tech-name">HTML5</span>
+           </div>
+           <div class="card" data-tech="CSS3">
+             <img src="./img/techs/Css.png" alt="Logo do CSS3">
+             <span class="tech-name">CSS3</span>
+           </div>
+           <div class="card" data-tech="JavaScript"> 
+                <img src="./img/techs/javascript-39404.png" alt="Logo do JavaScript">
+                <span class="tech-name">JavaScript</span>
             </div>
-            
-         </aside>  
-     </section> 
-        <figure>
 
-            <img src="./img/josemar.png" alt="Imagem de Josêmar Lino">
-            <figcaption>Josêmar Lino</figcaption>
-        </figure>
-       
-       
+            <div class="card" data-tech="MySQL">
+                <img src="./img/techs/mysql.png" alt="Logo do MySQL">
+                <span class="tech-name">MySQL</span>
+            </div>
+
+            <div class="card" data-tech="Node.js">
+                <img src="./img/techs/nodejs.svg" alt="Logo do Node.js">
+                <span class="tech-name">Node.js</span>
+            </div>
+
+            <div class="card" data-tech="React">
+                <img src="./img/techs/react.svg" alt="Logo do React">
+                <span class="tech-name">React</span>
+            </div>
+
+            <div class="card" data-tech="Python">
+                <img src="./img/techs/python.svg" alt="Logo do Python">
+                <span class="tech-name">Python</span>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <section id="projetos" class="projects">
+        <h2>💻 Projetos em Destaque</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./img/projects/linotech.png" alt="LinoTech - Soluções em IA">
+                </div>
+                <div class="project-content">
+                    <h3>LinoTech</h3>
+                    <p>Startup inovadora focada em desenvolver soluções corporativas utilizando Inteligência Artificial e Tecnologia da Informação. Como fundador e criador, lidero o desenvolvimento de produtos que transformam a maneira como as empresas operam no ambiente digital.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./img/projects/agrobold.png" alt="AgroBold Smart Criador">
+                </div>
+                <div class="project-content">
+                    <h3>AgroBold Smart Criador</h3>
+                    <p>Sistema de gestão inteligente para criadores, oferecendo soluções tecnológicas inovadoras para o agronegócio.</p>
+                    <div class="project-links">
+                        <a href="https://criador.agrobold.com.br/login" target="_blank" class="btn btn-primary">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     
     </main>
+
+    <section id="contato" class="contact">
+        <h2>📬 Contato</h2>
+        <p class="section-description">Vamos conversar sobre seu próximo projeto?</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/josêmarlino/" target="_blank" class="social-icon">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:josemars.lino@gmail.com">josemars.lino@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/5531996939541" target="_blank">+55 (31) 99693-9541</a>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <span>
-            &copy; Dev.Josêmar Lino, 2024 - Todos os direitos Reservados 
+            &copy; Dev.Josêmar Lino, 2025 - Todos os direitos Reservados 
         </span>
     </footer>
 </body>

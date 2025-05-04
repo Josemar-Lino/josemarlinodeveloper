@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00B4DB"/>
+            <stop offset="100%" style="stop-color:#0083B0"/>
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <circle cx="400" cy="400" r="350" fill="#1a1a1a"/>
+    <g transform="translate(200, 200)" filter="url(#glow)">
+        <path d="M200 0 C310 0 400 90 400 200 C400 310 310 400 200 400 C90 400 0 310 0 200 C0 90 90 0 200 0" fill="url(#logoGradient)"/>
+        <path d="M150 100 L250 100 M150 200 L250 200 M150 300 L250 300" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+        <circle cx="200" cy="200" r="120" fill="none" stroke="#fff" stroke-width="10" stroke-dasharray="20,10"/>
+    </g>
+</svg>

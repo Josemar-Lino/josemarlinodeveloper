@@ -1,31 +1,80 @@
 header {
-   background-color: #222;
-   padding: 25px;    
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+    background-color: rgba(34, 40, 49, 0.95);
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+}
+
+header.scrolled {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: rgba(34, 40, 49, 0.98);
 }
 
 header h1 {
-    font-size: 2.8em;
-    font-weight: 200;
+    font-size: 2.4em;
+    font-weight: 600;
     cursor: pointer;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 224, 255, 0.3);
+    transition: var(--transition-fast);
 }
 
 header nav {
-     display: flex;
-     align-items: center;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
 }
+
 header nav a {
-      margin-right: 1.3em;
-      font-size: 1.5em;    
+    font-size: 1.1em;
+    color: var(--text-light);
+    position: relative;
+    padding: 0.5em 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-
-header h1, a {
-       color: #00e0ff;   
+header nav a.social-icon {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    transition: var(--transition-fast);
 }
 
-header h1:hover,a:hover {
-       color: #fff;  
+header nav a:not(.social-icon)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: var(--transition-normal);
+}
+
+header nav a:not(.social-icon):hover::after {
+    width: 100%;
+}
+
+header h1:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 15px rgba(0, 224, 255, 0.5);
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+header nav a.social-icon:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px var(--primary-color);
 }

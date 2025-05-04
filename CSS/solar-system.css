@@ -1,0 +1,124 @@
+/* Estilos do Sistema Solar */
+.solar-system-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #0a0a2a;
+    overflow: hidden;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ff9933, #ff6600);
+    border-radius: 50%;
+    box-shadow: 0 0 60px #ff9933;
+    transform: translate(-50%, -50%);
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+}
+
+/* Planetas e suas órbitas */
+.mercury-orbit {
+    width: 140px;
+    height: 140px;
+    animation: orbit 4s linear infinite;
+}
+
+.mercury {
+    width: 10px;
+    height: 10px;
+    background: #b6bac5;
+    top: -5px;
+    left: 50%;
+}
+
+.venus-orbit {
+    width: 200px;
+    height: 200px;
+    animation: orbit 8s linear infinite;
+}
+
+.venus {
+    width: 15px;
+    height: 15px;
+    background: #e7cdcd;
+    top: -7.5px;
+    left: 50%;
+}
+
+.earth-orbit {
+    width: 280px;
+    height: 280px;
+    animation: orbit 12s linear infinite;
+}
+
+.earth {
+    width: 16px;
+    height: 16px;
+    background: #6b93d6;
+    top: -8px;
+    left: 50%;
+}
+
+.mars-orbit {
+    width: 340px;
+    height: 340px;
+    animation: orbit 20s linear infinite;
+}
+
+.mars {
+    width: 12px;
+    height: 12px;
+    background: #c1440e;
+    top: -6px;
+    left: 50%;
+}
+
+@keyframes orbit {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Estrelas de fundo */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 50px 160px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 250px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 130px 330px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 160px 190px, #fff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    animation: twinkle 4s ease-in-out infinite;
+}
