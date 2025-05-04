@@ -213,9 +213,9 @@ section h2 {
 /* Projetos */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -225,11 +225,13 @@ section h2 {
     overflow: hidden;
     transition: var(--transition-normal);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .project-image {
     width: 100%;
-    height: 200px;
+    height: 160px;
     overflow: hidden;
 }
 
